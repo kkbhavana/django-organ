@@ -1,0 +1,59 @@
+*{
+ margin: 0;
+ padding: 0;
+ outline: none;
+ box-sizing: border-box;
+}
+
+#home {
+height:100%;
+width:100%;
+margin-top:60px;
+margin-bottom:60px;
+}
+#home .home_container img{
+width:100%;
+height:500px;
+}
+#services .service_container .card{
+margin:60px;
+align-items:center;
+margin-left:auto;
+margin-right:auto;
+padding:30px;
+border:1px solid #8BCBE7;
+box-shadow: 15px 15px 15px #BBD3DF;
+}
+#services .service_container .card:hover{
+transform:scale(1.1);
+}
+
+#services .service_container .card .title{
+color:#8BCBE7;
+padding:5px 80px;
+}
+#services .service_container .card .title a{
+text-decoration:none;
+color:#59BEEB;
+}
+#services .service_container .card img{
+width:75%;
+height:50%;
+}
+
+#about .about_container{
+height:100%;
+width:100%;
+margin-top:60px;
+margin-bottom:60px;
+margin-left:auto;
+margin-right:auto;
+padding:30px;
+
+}
+#about .about_container .about-title{
+text-align:center;
+padding:30px;
+background-color:#B5D8E8;
+
+}

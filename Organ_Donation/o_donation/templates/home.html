@@ -1,0 +1,62 @@
+{% extends 'common.html'%}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link rel="stylesheet" href="{% static 'home.css'%}">
+    <title>Title</title>
+</head>
+<body>
+<section id="home">
+<div class="home_container">
+<img src="\static\background.jpeg" alt="image">
+</div>
+</section>
+<section id="services">
+
+    <div class="service_container">
+
+<div class="card" style="width: 25rem;">
+  <img src="/static/donation.jpg/" class="card-img-top" alt="...">
+  <div class="card-body">
+      <div class="title">
+      <a href="#"><h2>DONATE</h2>
+          <p>Register to Donate</a>
+          </p>
+         </div>
+        </div>
+</div>
+    </div>
+    <div class="service_container">
+        <div class="card" style="width: 25rem;">
+  <img src="/static/search_image.jpg/" class="card-img-top" alt="...">
+  <div class="card-body">
+      <div class="title">
+      <a href="{%url 'search_organ'%}"><h2>SEARCH</h2>
+          <p>Search for Doner</a>
+          </p>
+         </div>
+        </div>
+</div>
+    </div>
+
+</section>
+<section id="about">
+    <div class="about_container">
+        <div class="about-title"><h2>ORGAN DONATION</h2></div>
+        <p>Organ donation system is a services for people how are searching for organ.We are provide information of doner in your locality.  </p>
+    </div>
+
+</section>
+
+
+
+</body>
+</html>
+
+{% endblock content %}

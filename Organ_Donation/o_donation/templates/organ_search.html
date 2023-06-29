@@ -1,0 +1,29 @@
+{% extends 'common.html'%}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link rel="stylesheet" href="{% static 'organ_search.css'%}">
+    <title>Title</title>
+</head>
+<body>
+<section id="search-input">
+<div class="card-body">
+   <h2>Search for Organ</h2><hr>
+<form class="search" action="{% url 'search-result'%}" method="get">
+    <input name="q" class="fas fa-search" type="text" autocomplete="on" placeholder=" &#xF002;"/>
+</form>
+    <p>If you want to be a <a href="#">blood</a>/<a href="#">organ</a> doner?</p>
+ </div>
+</section>
+<section id="search-output">
+
+</section>
+</body>
+</html>
+{% endblock content %}

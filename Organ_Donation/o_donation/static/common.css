@@ -1,0 +1,30 @@
+*{
+ margin: 0;
+ padding: 0;
+ outline: none;
+ box-sizing: border-box;
+}
+body{
+height:100vh;
+
+}
+nav .navbar-expand-lg{
+margin-right:20px;
+}
+nav .btn-outline{
+color:#FFFFFF;
+border:1px solid #FFFFFF;
+margin-right:20px;
+}
+nav .btn-outline:hover{
+color:#FFFFFF;
+border:1px solid #FFFFFF;
+transform:scale(1.1);
+}
+nav .btn-outline:hover:active{
+color:#FFFFFF;
+border:1px solid #FFFFFF;
+}
+footer{
+margin-top:100px;
+}
