@@ -12,3 +12,7 @@ class Doner(models.Model):
     phone_number = models.CharField(max_length=250)
     place = models.CharField(max_length=250)
     status = models.BooleanField()
+
+
+    def __str__(self):
+        return self.name

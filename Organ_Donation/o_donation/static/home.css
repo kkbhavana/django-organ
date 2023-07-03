@@ -55,5 +55,10 @@ padding:30px;
 text-align:center;
 padding:30px;
 background-color:#B5D8E8;
-
+}
+#faqs .mb-3{
+padding:30px;
+border:1px solid #8BCBE7;
+box-shadow: 15px 15px 15px #BBD3DF;
+margin:50px;
 }

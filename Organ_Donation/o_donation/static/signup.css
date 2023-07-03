@@ -18,6 +18,11 @@ margin-right:auto;
 padding:30px;
 box-shadow: 15px 15px 15px #BBD3DF;
 }
+.signup-container h2{
+text-align:center;
+padding:20px;
+
+}
 .signup-container ul li{
 display:flex;
 flex-wrap:wrap;

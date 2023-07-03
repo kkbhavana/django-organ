@@ -16,7 +16,15 @@
 <div class="home_container">
 <img src="\static\background.jpeg" alt="image">
 </div>
-</section>
+</section><hr>
+<section id="about">
+    <div class="about_container">
+        <div class="about-title"><h2>ORGAN DONATION</h2></div>
+        <p>Organ donation system is a services for people how are searching for organ.We are provide information of doner in your locality.  </p>
+    </div>
+
+</section><hr>
+
 <section id="services">
 
     <div class="service_container">
@@ -25,7 +33,7 @@
   <img src="/static/donation.jpg/" class="card-img-top" alt="...">
   <div class="card-body">
       <div class="title">
-      <a href="#"><h2>DONATE</h2>
+      <a href="{% url 'register' %}"><h2>DONATE</h2>
           <p>Register to Donate</a>
           </p>
          </div>
@@ -45,14 +53,30 @@
 </div>
     </div>
 
-</section>
-<section id="about">
-    <div class="about_container">
-        <div class="about-title"><h2>ORGAN DONATION</h2></div>
-        <p>Organ donation system is a services for people how are searching for organ.We are provide information of doner in your locality.  </p>
+</section><hr>
+<section id="faqs">
+    <div class="card mb-3" style="max-width: 70rem;">
+        <h5>What happens after I sign up to be an organ donor?</h5>
+        <p>After you sign up to be an organ donor, be sure to tell your family and friends. It’s important to let them
+            know your wishes so they can honor your decision at the end of life. Also be sure to keep your information,
+            such as a current mailing address, up to date in your state’s donor registry</p>
+    </div>
+    <div class="card mb-3" style="max-width: 70rem;">
+        <h5>Can I donate an organ or tissue while I’m still living?</h5>
+        <p>Most donations occur after the donor has died, but it is possible to donate certain organs or tissue to
+            someone in need while still living. Living donation has a different process than that of a deceased donor
+            donation. To learn more about living donation, visit <a href="https://www.organdonor.gov/">organdonor.gov</a>.</p>
+    </div>
+    <div class="card mb-3" style="max-width: 70rem;">
+        <h5>Does it cost money to donate your organs?</h5>
+        <p>No. The organ donor’s family is not charged for donation. Insurance or the people who receive the organ
+            donation pay those costs. However, the donor’s family is still responsible for any costs associated with
+            medical care at the end of life, and funeral and burial arrangements.</p>
     </div>
 
+
 </section>
+
 
 
 
