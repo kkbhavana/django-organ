@@ -11,7 +11,6 @@ from .models import Doner
 def home(request):
     return render(request, 'home.html')
 
-
 def searchorgan(request):
     return render(request, 'organ_search.html')
 
