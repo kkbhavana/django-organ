@@ -22,3 +22,10 @@ padding:5px;
 margin-bottom:30px;
 font-family:italic;
 }
+
+#organ-details .mb-3{
+padding:30px;
+border:1px solid #8BCBE7;
+box-shadow: 15px 15px 15px #BBD3DF;
+margin:50px;
+}

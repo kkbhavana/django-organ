@@ -41,7 +41,8 @@
 
   </div>
     {% if user.is_authenticated %}
-                    <a href="{% url 'data' %}"class="profile-link">Profile</a>
+                <a class="btn btn-outline" href="{% url 'data' %}"class="profile-link">Profile</a>
+
                     <a class="btn btn-outline" href="{% url 'logout'%}">Sign Out</a>
 
 
