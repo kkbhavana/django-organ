@@ -29,12 +29,14 @@ transform:scale(1.1);
 }
 
 #services .service_container .card .title{
-color:#8BCBE7;
+color:#59BEEB;
 padding:5px 80px;
 }
 #services .service_container .card .title a{
-text-decoration:none;
 color:#59BEEB;
+}
+#services .service_container .card .title a:hover{
+color:#8BCBE7;
 }
 #services .service_container .card img{
 width:75%;
@@ -51,10 +53,10 @@ margin-right:auto;
 padding:30px;
 
 }
-#about .about_container .about-title{
+.title{
 text-align:center;
 padding:30px;
-background-color:#B5D8E8;
+color:#59BEEB;
 }
 #faqs .mb-3{
 padding:30px;
