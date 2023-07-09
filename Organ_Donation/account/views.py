@@ -7,7 +7,7 @@ from django.views import generic
 # Create your views here.
 class SignUpView(generic.CreateView):
     form_class = UserCreationForm
-    success_url = reverse_lazy('search_organ')
+    success_url = reverse_lazy('signup-home')
     template_name = 'signup.html'
 
 

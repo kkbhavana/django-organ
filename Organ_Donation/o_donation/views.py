@@ -11,6 +11,9 @@ from .models import Doner, BloodDoner
 def home(request):
     return render(request, 'home.html')
 
+def signuphome(request):
+    return render(request, 'signup_page.html')
+
 
 def searchorgan(request):
     return render(request, 'organ_search.html')
