@@ -1,0 +1,26 @@
+{% extends 'common.html'%}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link rel="stylesheet" href="{% static 'register.css'%}">
+    <title>Title</title>
+</head>
+<body>
+<div class="form-container">
+<h2>Register</h2>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+     <div class="button-primary">
+ <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+</form>
+</div>
+</body>
+</html>
+{% endblock content %}

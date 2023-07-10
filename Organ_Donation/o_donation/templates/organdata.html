@@ -1,0 +1,70 @@
+{% extends 'common.html'%}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link rel="stylesheet" href="{% static 'organdata.css'%}">
+    <title>Title</title>
+</head>
+<body>
+<div class="mydata">
+
+    <h3>My Data</h3>
+<form method="get">
+    {% csrf_token %}
+{% for mydatas in doner %}
+    <h4>Welcome:{{user}}</h4>
+    <p>Your organ donation details</p>
+ <div class="input-box">
+         <div class="label">Name:</div>
+        <div class="data">{{mydatas.name}}</div>
+      </div>
+    <div class="input-box">
+         <div class="label">Age:</div>
+        <div class="data">{{mydatas.age}}</div>
+      </div>
+     <div class="input-box">
+         <div class="label">Gender:</div>
+        <div class="data">{{mydatas.gender}}</div>
+      </div>
+    <div class="input-box">
+         <div class="label">Blood Group:</div>
+        <div class="data">{{mydatas.blood_group}}</div>
+      </div>
+    <div class="input-box">
+         <div class="label">Organ:</div>
+        <div class="data">{{mydatas.organ}}</div>
+      </div>
+    <div class="input-box">
+         <div class="label">Phone Number:</div>
+        <div class="data">{{mydatas.phone_number}}</div>
+      </div>
+    <div class="input-box">
+         <div class="label">Place:</div>
+        <div class="data">{{mydatas.place}}</div>
+      </div>
+    <div class="input-box">
+         <div class="label">Status:</div>
+        <div class="data">{% if mydatas.status is True%}
+                            Available
+                            {% else%}
+                            Not Available
+                            {% endif%}
+        </div>
+      </div>
+
+<a class="btn btn-primary" href="{% url 'update-organ' mydatas.id %}">Edit</a>
+<a class="btn btn-primary" href="{% url 'delete-organ' mydatas.id %}">Delete</a>
+  </form>
+      {% endfor %}
+
+</div>
+
+</body>
+</html>
+{% endblock content %}
