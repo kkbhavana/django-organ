@@ -45,14 +45,7 @@
 
                 <ul class="dropdown-menu">
                     {% if user.is_authenticated %}
-                     <li><a class="dropdown-item" href="{% url 'organ-data' %}">Organ donation</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="{% url 'blood-data' %}">Blood donation</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
+
                     <li><a class="dropdown-item" href="{% url 'logout'%}">Sign Out</a></li>
 
                     {% else %}
