@@ -33,21 +33,13 @@ margin-ri
 footer{
 margin-top:100px;
 }
-
-.dropdown-toggle{
+nav .signbuttom a{
+margin-right:30px;
+text-decoration:none;
 color:#FFFFFF;
-margin-right:100px;
+padding:10px;
+border-radius:5px;
 }
-.dropdown-toggle:hover{
-color:#FFFFFF;
-}
-
-.dropdown-toggle:hover:active{
-color:#FFFFFF;
-border:#FFFFFF;
-}
-
-.dropdown-item:hover{
-background-color:#8BCBE7;
-color:#FFFFFF;
+nav .signbuttom a:hover{
+border:1px solid #FFFFFF;
 }
