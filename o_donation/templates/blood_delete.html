@@ -1,0 +1,27 @@
+{% extends 'common.html' %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link rel="stylesheet" href="{% static 'organ_delete.css'%}">
+    <title>Title</title>
+</head>
+<body>
+<div class="delete-container">
+    <form method="post">
+        {% csrf_token %}
+       <h5>{{user}}</h5>
+    <p>Do you want to delete your details from our system?</p>
+        <input class="btn btn-primary" type="submit" value="Yes">
+        <a class="btn btn-primary" href="{% url 'blood-data'%}">No</a>
+
+    </form>
+</div>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends 'common.html' %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link rel="stylesheet" href="{% static 'organ_result.css'%}">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Doner List</h2><hr>
+<table class="center">
+{%for doners in object_list %}
+<tr>
+    <td>{{doners.name}}</td>
+ <td>{{doners.age}}</td>
+ <td>{{doners.gender}}</td>
+ <td>{{doners.blood_group}}</td>
+ <td>{{doners.organ}}</td>
+ <td>{{doners.phone_number}}</td>
+ <td>{{doners.place}}</td>
+<td> {% if doners.status is True%}
+    Available
+    {%else%}
+    Not Available</td>
+    {% endif%}
+ </tr>
+{% empty %}
+<h5 class="text-danger">Nothing Found</h5>
+{% endfor %}
+</table>
+
+</body>
+</html>
+
+{% endblock content %}
