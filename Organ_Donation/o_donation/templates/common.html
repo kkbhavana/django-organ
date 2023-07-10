@@ -2,77 +2,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+          crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="{% static 'common.css'%}">
   <title>Title</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg" style="background-color:#8BCBE7;">
-  <a class="navbar-brand" href="#home"style="color:#FFFFFF;margin-left:10px;" >Pratheeksha</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg " style="background-color:#8BCBE7;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#home"style="color:#FFFFFF;margin-left:10px;">Pratheeksha</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home'%}"style="color:#FFFFFF;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about" style="color:#FFFFFF;">About</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#services" style="color:#FFFFFF;">Services</a>
+              </li>
+                 </li>
+                <li class="nav-item">
+                <a class="nav-link"  href="#faqs" style="color:#FFFFFF;">FAQs</a>
+              </li>
+            </ul>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active" >
-        <a class="nav-link" href="{% url 'home'%}" style="color:#FFFFFF;">Home</a>
-      </li>
-        <li class="nav-item active" >
-        <a class="nav-link" href="#about" style="color:#FFFFFF;">About</a>
-      </li>
-        </li>
-         <li class="nav-item active" >
-        <a class="nav-link" href="#services" style="color:#FFFFFF;">Services</a>
-      </li>
-         <li class="nav-item active" >
-        <a class="nav-link" href="#faqs" style="color:#FFFFFF;">FAQ</a>
-      </li>
-
-    </ul>
-
-  </div>
-    {% if user.is_authenticated %}
-     <div class="dropdown">
+            <div class="dropdown">
                 <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false"><i class='far fa-user'></i>
                 </button>
-         <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="#">My Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-             <li><a class="dropdown-item" href="{% url 'organ-data' %}">Organ donation</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-              <li><a class="dropdown-item" href="{% url 'blood-data' %}">Blood donation</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-         </ul>
-     </div>
-                    <a class="btn btn-outline" href="{% url 'logout'%}">Sign Out</a>
 
+                <ul class="dropdown-menu">
+                    {% if user.is_authenticated %}
+                     <li><a class="dropdown-item" href="{% url 'organ-data' %}">Organ donation</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'blood-data' %}">Blood donation</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'logout'%}">Sign Out</a></li>
 
                     {% else %}
-                    <a class="btn btn-outline" href="{% url 'signup'%}">Sign Up</a>
-
-
-
+                    <li><a class="dropdown-item" href="{% url 'login'%}">Sign In</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'signup' %}">Sign Up</a></li>
                     {% endif %}
+                </ul>
+            </div>
 
-
-
-
+        </div>
+    </div>
 </nav>
 
 
@@ -88,25 +82,17 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
 
 
       <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
 
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
 
       <!-- Youtube-->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-youtube"></i
-      ></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-youtube"></i></a>
 
     </section>
     <!-- Section: Social media -->
