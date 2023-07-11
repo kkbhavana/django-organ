@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 from django.shortcuts import render
@@ -11,19 +12,20 @@ from .models import Doner, BloodDoner
 def home(request):
     return render(request, 'home.html')
 
+
 def signuphome(request):
     return render(request, 'signup_page.html')
 
-
+@login_required
 def searchorgan(request):
     return render(request, 'organ_search.html')
 
-
+@login_required
 def searchblood(request):
     return render(request, 'blood_search.html')
 
 
-class SearchOrganView(LoginRequiredMixin, ListView):
+class SearchOrganView(ListView):
     model = Doner
     template_name = 'organ_result.html'
 
@@ -34,7 +36,7 @@ class SearchOrganView(LoginRequiredMixin, ListView):
         )
 
 
-class SearchBloodView(LoginRequiredMixin, ListView):
+class SearchBloodView(ListView):
     model = BloodDoner
     template_name = 'blood_result.html'
 
@@ -81,18 +83,19 @@ class OrgandataDelete(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('organ-data')
     template_name = 'organ_delete.html'
 
-class BloodDataView(LoginRequiredMixin,ListView):
+
+class BloodDataView(LoginRequiredMixin, ListView):
     model = BloodDoner
     context_object_name = 'blood'
-    template_name ='blooddata.html'
-
+    template_name = 'blooddata.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['blood'] = context['blood'].filter(user=self.request.user)
         return context
 
-class BloodRegisterFormCreate(LoginRequiredMixin,CreateView):
+
+class BloodRegisterFormCreate(LoginRequiredMixin, CreateView):
     model = BloodDoner
     fields = ['name', 'age', 'gender', 'blood_group', 'phone_number', 'place', 'status']
     template_name = 'blood_register.html'
@@ -102,15 +105,15 @@ class BloodRegisterFormCreate(LoginRequiredMixin,CreateView):
         form.instance.user = self.request.user
         return super(BloodRegisterFormCreate, self).form_valid(form)
 
-class BloodDataUpdate(LoginRequiredMixin,UpdateView):
+
+class BloodDataUpdate(LoginRequiredMixin, UpdateView):
     model = BloodDoner
     fields = ['name', 'age', 'gender', 'blood_group', 'phone_number', 'place', 'status']
     template_name = 'blood_register.html'
     success_url = reverse_lazy('blood-data')
 
 
-class BloodDataDelete(LoginRequiredMixin,DeleteView):
+class BloodDataDelete(LoginRequiredMixin, DeleteView):
     model = BloodDoner
     template_name = 'blood_delete.html'
     success_url = reverse_lazy('blood-data')
-
