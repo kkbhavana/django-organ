@@ -14,85 +14,18 @@
 <body>
 <h1>WELCOME</h1><h3 style="color:#59BEEB">{{user}}</h3>
 <div class="card mb-3" style="max-width: 70rem;">
-
-        <h5 style="color:#59BEEB">Organ Donation</h5>
-        <p>Organ donation is the process of surgically removing an organ or tissue from one person
-            (the organ donor) and placing it into another person (the recipient). Transplantation is necessary
-            because the recipient’s organ has failed or has been damaged by disease or injury. Organ
-            transplantation is one of the great advances in modern medicine. Unfortunately, the need for organ
-            donors is much greater than the number of people who actually donate. Every day in the United States,
-            21 people die waiting for an organ and more than 107,380 men, women and children await life-saving organ
-            transplants.</p>
-    <p>Please click here to register for <a  style="width:15%" href="{%url 'register_organ'%}">Organ Donation</a></p>
+    <p>Please click here for : </p>
+    <a class="btn btn-primary" href="{%url 'register_organ'%}">Organ Donation</a>
+<!--    <p>Please click here to : </p>-->
+    <a class="btn btn-primary" href="{%url 'search_organ'%}">Search for Organ</a>
+<!--    <p>Please click here to register for : </p>-->
+    <a  class="btn btn-primary" href="{%url 'register_blood'%}">Blood Donation</a>
+<!--    <p>Please click here to : </p>-->
+    <a  class="btn btn-primary" href="{% url 'search_blood' %}">Search for Blood</a>
 </div>
 <div class="card mb-3" style="max-width: 70rem;">
 
-        <h5 style="color:#59BEEB">What organs can be transplanted?</h5>
-        <ul>
-            <li>Liver.</li>
-            <li>Kidney.</li>
-            <li>Heart.</li>
-            <li>Lung.</li>
-            <li>Intestine.</li>
-            <li>Eyes.</li>
-        </ul>
-    <p>Please click here to <a  style="width:15%" href="{%url 'search_organ'%}">Search for Organ</a></p>
-</div>
-
-<div class="card mb-3" style="max-width: 70rem;">
-
-        <h5 style="color:#59BEEB">Blood Donation</h5>
-        <p>Blood donation is a voluntary procedure that can help save lives. There are several types of blood
-            donation. Each type helps meet different medical needs.Whole blood donation is the most common type of
-            blood donation. During this donation, you donate about a pint (about half a liter) of whole blood.
-            The blood is then separated into its components — red cells, plasma and sometimes platelets.</p>
-    <p>Please click here to register for <a  style="width:15%" href="{%url 'register_blood'%}">Blood Donation</a> </p>
-</div>
-<div class="card mb-3" style="max-width: 70rem;">
- <h5 style="color:#59BEEB" >Blood Type Matching</h5>
-<table class="center" style="width:50%">
- <tr>
-    <th>Recipient Blood Type</th>
-    <th>Matching Donor Blood Type</th>
-  </tr>
-  <tr>
-    <td>A+</td>
-    <td>A+, A-, O+, O-</td>
-  </tr>
-  <tr>
-    <td>A-</td>
-    <td>A-, O-</td>
-  </tr>
-    <tr>
-    <td>B+</td>
-    <td>B+, B-, O+, O-</td>
-  </tr>
- <tr>
-    <td>B-</td>
-    <td>B-, O-</td>
-  </tr>
- <tr>
-    <td>AB+</td>
-    <td>Compatible with all blood types</td>
-  </tr>
-    <tr>
-    <td>AB-</td>
-    <td>AB-, A-, B-, O-</td>
-  </tr>
-<tr>
-    <td>O+</td>
-    <td>O+, O-</td>
-  </tr>
-    <tr>
-    <td>O-</td>
-    <td>O-</td>
-  </tr>
-</table>
-    <p>Please click here to <a  style="width:15%" href="{% url 'search_blood' %}">Search for Blood</a> </p>
-</div>
-<div class="card mb-3" style="max-width: 70rem;">
-
-        <h5 style="color:#59BEEB" >View Register Forms</h5>
+        <h5 style="color:#59BEEB" >View Register Forms :</h5>
       <a  class="btn btn-primary" href="{% url 'organ-data' %}">ORGAN DONATION</a>
     <a  class="btn btn-primary" href="{% url 'blood-data' %}">BLOOD DONATION</a>
     </div>

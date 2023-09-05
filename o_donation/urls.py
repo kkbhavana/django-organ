@@ -6,7 +6,7 @@ from .views import SearchOrganView, OrganRegisterFormCreate, OrgandataView, Orga
 
 urlpatterns = [
  path('', views.home, name='home'),
-path('main_page/', views.signuphome, name='signup-home'),
+ path('main_page/', views.signuphome, name='signup-home'),
  path('search_for_organ/',views.searchorgan,name='search_organ'),
  path('search_for_blood/',views.searchblood,name='search_blood'),
  path('search-organ/',SearchOrganView.as_view(),name='organ-result'),
